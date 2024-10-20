@@ -1,21 +1,31 @@
 /* Reset default browser styles using the wildcard selector */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #3a3a3a;
+}
 
 /* Header */
 header {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
 
 /* Main */
 main {
-    background-color: blueviolet;
+  background-color: blueviolet;
+  /* Main content takes up remaining space */
+    flex: 1 0 auto;
 }
 
 /* Footer */
 footer {
-    background-color: orange;
+  background-color: orange;
 }

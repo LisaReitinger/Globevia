@@ -1,0 +1,21 @@
+/* Reset default browser styles using the wildcard selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Header */
+header {
+    background-color: aquamarine;
+}
+
+/* Main */
+main {
+    background-color: blueviolet;
+}
+
+/* Footer */
+footer {
+    background-color: orange;
+}

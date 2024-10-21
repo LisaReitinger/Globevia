@@ -1,6 +1,9 @@
 /* Import Google Fonts for Lato and Lustria */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lustria&display=swap');
 
+/* Import Font Awesome for the bar icon */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 /* Reset default browser styles using the wildcard selector */
 * {
   margin: 0;
@@ -21,33 +24,76 @@ body {
 /* Apply Lustria for headings and large text */
 h1, h2, h3 {
   font-family: 'Lustria', serif;
+  color: #ffffff; 
 }
 
-/* Header/Nav */
+/* Hidden logo */
+.hidden {
+  display: none;
+}
+
+/* Header/Nav for mobile */
 header {
   background-color: #006262;
-  padding: 10px 0;
+  padding: 10px 20px;
   position: fixed;
   z-index: 99;
   width: 100%;
   box-shadow: 0 2px 2px #000000;
-
 }
 
+/* Navbar structure */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+}
+
+.logo-image img {
+  width: 80px;
+  height: auto;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px; 
+}
+
+.nav-toggle-label i {
+  color: white;
+}
+
+/* Show nav when the toggle (checkbox) is checked */
+#nav-toggle:checked + .nav-toggle-label + nav {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #006262;
+  top: 103.05px;
+}
+
+/* Mobile-first Nav Links */
+nav {
+  display: none; 
 }
 
 nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column; 
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 10px 0;
 }
 
 nav ul li a {
@@ -57,27 +103,22 @@ nav ul li a {
   text-transform: uppercase;
   font-size: 16px;
   padding: 10px;
+  display: block;
 }
 
 nav ul li a:hover {
   background-color: white;
-  color: #333;
+  color: #000000;
   padding: 10px 15px;
   border-radius: 5px;
-}
-
-/* Logo Image Styling */
-.logo-image img.img-globe {
-  width: 80px;
-  height: auto;
-  display: block;
 }
 
 /* Main */
 main {
   background-color: #1d4444;
   /* Main content takes up remaining space */
-    flex: 1 0 auto;
+    flex: 1;
+    padding: 20px;
 }
 
 /* Footer */

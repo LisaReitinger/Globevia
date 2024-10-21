@@ -32,11 +32,23 @@
         <div class="navbar">
             <div class="logo-image">
                 <a href="index.html">
-                    <img src="assets/navbar-brand/logo.png" alt="Globevia logo of a globe with an airplane and a destination pin" class="img-globe">
+                    <img src="assets/navbar-brand/logo.png"
+                        alt="Globevia logo of a globe with an airplane and a destination pin" class="img-globe">
                 </a>
             </div>
+
+            <!--Hidden h1-->
+            <h1 id="logo" class="hidden">Globevia</h1>
+
+            <!-- Hamburger Menu (for mobile) -->
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <!-- Navigation Menu -->
             <nav>
-                <ul>
+                <ul id="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="destinations.html">Destinations</a></li>
                     <li><a href="about.html">About Us</a></li>

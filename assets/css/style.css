@@ -136,6 +136,7 @@ main {
   /* Main content takes up remaining space */
     flex: 1;
     padding: 20px;
+    margin-top: 103.05px; 
 }
 
 /* Footer */

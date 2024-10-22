@@ -53,10 +53,20 @@ header {
 }
 
 .active {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-  color: #000000
+  color: #ffffff;
+  position: relative;
+}
+
+/* Add location-dot icon next to active link */
+.active::after {
+  content: '\f3c5'; /* Font Awesome location-dot icon */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #970707; /* Custom color for the icon */
+  margin-left: 10px; /* Spacing between text and icon */
+  --fa-rotate-angle: 82e48deg; /* Custom rotation */
+  transform: rotate(82deg); /* CSS rotation */
+  font-size: 1.2em;
 }
 
 /* Navbar structure */
@@ -174,6 +184,19 @@ footer {
   .logo-image img {
     width: 100px; 
   }
+
+  /* Remove icon on larger screens and add a white underline for active links */
+  .active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+
+  /* Ensure proper vertical alignment for the text on larger screens */
+  .active::after {
+    content: ''; /* Remove the icon */
+  }
+
 
    /* Adjust main margin-top to 123.5px */
    main {

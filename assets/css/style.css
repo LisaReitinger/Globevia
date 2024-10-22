@@ -143,3 +143,41 @@ main {
 footer {
   background-color: #035091;
 }
+
+/* Media query: Tablets and larger screens (768px and up) */
+@media screen and (min-width: 768px) { 
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  nav ul {
+    margin-top: 10px; 
+  }
+
+  #nav-toggle, .nav-toggle-label {
+    display: none;
+  }
+
+  /* Adjust logo position and size for larger screens */
+  .logo-image img {
+    width: 100px; 
+  }
+
+   /* Adjust main margin-top to 123.5px */
+   main {
+    margin-top: 123.5px;
+  }
+  
+}

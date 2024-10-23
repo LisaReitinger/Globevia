@@ -55,17 +55,19 @@ header {
 .active {
   color: #ffffff;
   position: relative;
+  border-bottom: 2px solid transparent;
 }
 
 /* Add location-dot icon next to active link */
 .active::after {
-  content: '\f3c5'; /* Font Awesome location-dot icon */
+  /* Font Awesome location-dot icon */
+  content: '\f3c5'; 
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
   color: #970707; /* Custom color for the icon */
-  margin-left: 10px; /* Spacing between text and icon */
-  --fa-rotate-angle: 82e48deg; /* Custom rotation */
-  transform: rotate(82deg); /* CSS rotation */
+  margin-left: 10px; 
+  --fa-rotate-angle: 82e48deg; 
+  transform: rotate(82deg); 
   font-size: 1.2em;
 }
 
@@ -131,6 +133,7 @@ nav ul li a {
   font-size: 16px;
   padding: 10px;
   display: block;
+  
 }
 
 nav ul li a:hover {
@@ -138,6 +141,7 @@ nav ul li a:hover {
   color: #000000;
   padding: 10px 15px;
   border-radius: 5px;
+  border: 2px solid white;
 }
 
 /* Main */
@@ -190,17 +194,40 @@ footer {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
+    border-bottom: none;
   }
 
   /* Ensure proper vertical alignment for the text on larger screens */
   .active::after {
-    content: ''; /* Remove the icon */
+    content: ''; 
   }
-
 
    /* Adjust main margin-top to 123.5px */
    main {
     margin-top: 123.5px;
   }
   
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  
+  nav ul li a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .logo-image img {
+    width: 120px;
+  }
+
+  /* Adjust for even larger screens */
+  main {
+    margin-top: 143.5px;
+  }
 }

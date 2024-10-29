@@ -149,9 +149,54 @@ main {
   background-color: #1d4444;
   /* Main content takes up remaining space */
     flex: 1;
-    padding: 20px;
     margin-top: 103.05px; 
 }
+
+/* Hero Section */
+.hero {
+  background: url("../images/hero.jpg") no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-content {
+  background-color: #006262;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1, .hero p {
+  margin: 10px 0;
+}
+
+/* Button styling */
+.hero-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #006262;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e0f2f2;
+}
+
 
 /* Footer */
 footer {

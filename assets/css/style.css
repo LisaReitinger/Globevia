@@ -398,4 +398,36 @@ footer {
     main {
       margin-top: 143.5px;
     }
+
+    .destination-text {
+      max-width: 500px;
+      /* Constrain text block width */
+      padding: 30px;
+      margin: 0 auto;
+      background-color: rgba(0, 98, 98, 0.85);
+      color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      text-align: left;
+    }
+
+    /* Paragraph styling within text block */
+    .destination-text p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    /* CTA button */
+    .destination-cta {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 20px;
+      background-color: #006262;
+      color: #004848;
+      /* Darker, complementary text color */
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
   }

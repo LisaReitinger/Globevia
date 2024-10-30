@@ -253,7 +253,34 @@ main {
 
 /* Footer */
 footer {
-  background-color: #035091;
+  background-color: #006262;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#social-networks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#social-networks li {
+  display: inline-block;
+}
+
+#social-networks i {
+  font-size: 160%;
+  color: #ffffff; /* Icon color set to white */
+  transition: color 0.3s ease;
+  padding: 5%;
+}
+
+/* Hover effect */
+#social-networks a:hover i {
+  color: #e0f2f2; /* Slightly lighter hover color */
 }
 
 /* Media query: Tablets and larger screens (768px and up) */
@@ -328,6 +355,7 @@ footer {
     height: 350px;
     margin: 0;
     flex-shrink: 0;
+  }
 
     .mexico .round-image.large-image {
       margin-left: 30px;

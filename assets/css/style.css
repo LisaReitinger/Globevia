@@ -22,9 +22,11 @@ body {
 }
 
 /* Apply Lustria for headings and large text */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Lustria', serif;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 /* Hidden logo */
@@ -48,7 +50,7 @@ header {
   list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
   margin-bottom: 1em;
 }
 
@@ -61,13 +63,14 @@ header {
 /* Add location-dot icon next to active link */
 .active::after {
   /* Font Awesome location-dot icon */
-  content: '\f3c5'; 
+  content: '\f3c5';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
-  color: #970707; /* Custom color for the icon */
-  margin-left: 10px; 
-  --fa-rotate-angle: 82e48deg; 
-  transform: rotate(82deg); 
+  color: #970707;
+  /* Custom color for the icon */
+  margin-left: 10px;
+  --fa-rotate-angle: 82e48deg;
+  transform: rotate(82deg);
   font-size: 1.2em;
 }
 
@@ -90,7 +93,7 @@ header {
 .nav-toggle-label {
   cursor: pointer;
   color: #ffffff;
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 .nav-toggle-label i {
@@ -98,7 +101,7 @@ header {
 }
 
 /* Show nav when the toggle (checkbox) is checked */
-#nav-toggle:checked + .nav-toggle-label + nav {
+#nav-toggle:checked+.nav-toggle-label+nav {
   display: block;
   position: absolute;
   top: 50px;
@@ -110,7 +113,7 @@ header {
 
 /* Mobile-first Nav Links */
 nav {
-  display: none; 
+  display: none;
 }
 
 nav ul {
@@ -118,7 +121,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 nav ul li {
@@ -133,7 +136,7 @@ nav ul li a {
   font-size: 16px;
   padding: 10px;
   display: block;
-  
+
 }
 
 nav ul li a:hover {
@@ -148,8 +151,8 @@ nav ul li a:hover {
 main {
   background-color: #1d4444;
   /* Main content takes up remaining space */
-    flex: 1;
-    margin-top: 103.05px; 
+  flex: 1;
+  margin-top: 103.05px;
 }
 
 /* Hero Section */
@@ -176,7 +179,8 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.hero h1, .hero p {
+.hero h1,
+.hero p {
   margin: 10px 0;
 }
 
@@ -218,8 +222,8 @@ main {
 }
 
 .round-image {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   margin-bottom: 15px;
   transition: transform 0.3s;
@@ -243,7 +247,7 @@ main {
 }
 
 .destination-cta:hover {
-  background-color: #970707;
+  background-color: #035091;
   transform: scale(1.05);
 }
 
@@ -253,7 +257,7 @@ footer {
 }
 
 /* Media query: Tablets and larger screens (768px and up) */
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
 
   nav {
     display: flex;
@@ -271,16 +275,17 @@ footer {
   }
 
   nav ul {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 
-  #nav-toggle, .nav-toggle-label {
+  #nav-toggle,
+  .nav-toggle-label {
     display: none;
   }
 
   /* Adjust logo position and size for larger screens */
   .logo-image img {
-    width: 100px; 
+    width: 100px;
   }
 
   /* Remove icon on larger screens and add a white underline for active links */
@@ -293,35 +298,104 @@ footer {
 
   /* Ensure proper vertical alignment for the text on larger screens */
   .active::after {
-    content: ''; 
+    content: '';
   }
 
-   /* Adjust main margin-top to 123.5px */
-   main {
+  /* Adjust main margin-top to 123.5px */
+  main {
     margin-top: 123.5px;
   }
-  
-}
 
-/* Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-  
-  nav ul li a {
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
+  .destination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 80%;
+    margin: 50px auto;
+    text-align: left;
   }
 
-  nav ul li a:hover {
-    border-bottom: 1px solid white;
+  .mexico {
+    flex-direction: row-reverse;
   }
 
-  .logo-image img {
-    width: 120px;
+  /* Larger image with left alignment */
+
+  .round-image.large-image {
+    width: 350px;
+    height: 350px;
+    margin: 0;
+    flex-shrink: 0;
+
+    .mexico .round-image.large-image {
+      margin-left: 30px;
+      margin-right: 0;
+    }
+
+    /* Text container with padding and max-width for readability */
+    .destination-text {
+      background-color: rgba(0, 98, 98, 0.8);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+
+    /* Add margin to space text container for staggered alignment */
+    .mexico .destination-text {
+      margin-right: 30px;
+    }
+
+    /* Margin for each destination text paragraph and CTA */
+    .destination-text p {
+      margin-bottom: 20px;
+    }
+
+    /* CTA button aligned below text */
+    .destination-cta {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #006262;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .destination-cta:hover {
+      background-color: #e0f2f2;
+      transform: scale(1.05);
+    }
+
+    .destination+.destination {
+      margin-top: 50px;
+    }
   }
 
-  /* Adjust for even larger screens */
-  main {
-    margin-top: 143.5px;
+  /* Large devices (laptops and desktops, 992px and up) */
+  @media screen and (min-width: 992px) {
+
+    nav ul li a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      border-bottom: 1px solid white;
+    }
+
+    .logo-image img {
+      width: 120px;
+    }
+
+    /* Adjust for even larger screens */
+    main {
+      margin-top: 143.5px;
+    }
   }
-}

@@ -81,6 +81,7 @@ header {
   align-items: center;
 }
 
+
 .logo-image img {
   width: 80px;
   height: auto;
@@ -273,36 +274,114 @@ footer {
 
 #social-networks i {
   font-size: 160%;
-  color: #ffffff; /* Icon color set to white */
+  color: #ffffff;
   transition: color 0.3s ease;
   padding: 5%;
 }
 
 /* Hover effect */
 #social-networks a:hover i {
-  color: #e0f2f2; /* Slightly lighter hover color */
+  color: #e0f2f2;
+  /* Slightly lighter hover color */
+}
+
+/* Destination page */
+
+/* Main Content Container */
+.destination-main-content {
+  padding: 10px;
+}
+
+/* Section Headers */
+.destination-heading {
+  text-align: center;
+  font-size: 1.8em;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+/* Itinerary Container */
+.itinerary-container {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Each Day's Itinerary Box */
+.itinerary {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px 0;
+  min-height: 165px;
+}
+
+/* Individual Day Header */
+.itinerary h4 {
+  font-size: 1.2em;
+  color: #006262;
+  margin-bottom: 5px;
+}
+
+/* Paragraph Text */
+.itinerary p {
+  font-size: 1em;
+  color: #555555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Adding Padding to Edges for Readability */
+.destination-section {
+  padding: 0 10px;
+}
+
+/* Destination Section Spacing */
+.destination-section+.destination-section {
+  margin-top: 20px;
 }
 
 /* Media query: Tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
 
   nav {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  nav ul {
-    flex-direction: row;
-  }
-
-  nav ul li {
-    margin: 0 20px;
+    height: 100px;
+    width: 800px;
+    display: block;
   }
 
   nav ul {
     margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav ul li {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 0 0;
+  }
+
+  nav ul li a {
+    width: fit-content;
+  }
+
+
+  nav ul li a:hover {
+    background-color: white;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid white;
   }
 
   #nav-toggle,
@@ -333,15 +412,21 @@ footer {
     margin-top: 123.5px;
   }
 
+  /* Destinations section */
   .destination {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    max-width: 80%;
+    max-width: 90%;
     margin: 50px auto;
     text-align: left;
+  }
+
+  .itinerary {
+    height: 150px;
+    width: 100%;
   }
 
   .mexico {
@@ -349,7 +434,6 @@ footer {
   }
 
   /* Larger image with left alignment */
-
   .round-image.large-image {
     width: 350px;
     height: 350px;
@@ -357,105 +441,118 @@ footer {
     flex-shrink: 0;
   }
 
-    .mexico .round-image.large-image {
-      margin-left: 30px;
-      margin-right: 0;
-    }
-
-    /* Text container with padding and max-width for readability */
-    .destination-text {
-      background-color: rgba(0, 98, 98, 0.8);
-      color: #ffffff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      max-width: 500px;
-    }
-
-    /* Add margin to space text container for staggered alignment */
-    .mexico .destination-text {
-      margin-right: 30px;
-    }
-
-    /* Margin for each destination text paragraph and CTA */
-    .destination-text p {
-      margin-bottom: 20px;
-    }
-
-    /* CTA button aligned below text */
-    .destination-cta {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: #006262;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .destination-cta:hover {
-      background-color: #e0f2f2;
-      transform: scale(1.05);
-    }
-
-    .destination+.destination {
-      margin-top: 50px;
-    }
+  .mexico .round-image.large-image {
+    margin-left: 30px;
+    margin-right: 0;
   }
 
-  /* Large devices (laptops and desktops, 992px and up) */
-  @media screen and (min-width: 992px) {
-
-    nav ul li a {
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      border-bottom: 1px solid white;
-    }
-
-    .logo-image img {
-      width: 120px;
-    }
-
-    /* Adjust for even larger screens */
-    main {
-      margin-top: 143.5px;
-    }
-
-    .destination-text {
-      max-width: 500px;
-      /* Constrain text block width */
-      padding: 30px;
-      margin: 0 auto;
-      background-color: rgba(0, 98, 98, 0.85);
-      color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      text-align: left;
-    }
-
-    /* Paragraph styling within text block */
-    .destination-text p {
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    /* CTA button */
-    .destination-cta {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 8px 20px;
-      background-color: #006262;
-      color: #004848;
-      /* Darker, complementary text color */
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
+  /* Text container with padding and max-width for readability */
+  .destination-text {
+    background-color: rgba(0, 98, 98, 0.8);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
   }
+
+  /* Add margin to space text container for staggered alignment */
+  .mexico .destination-text {
+    margin-right: 30px;
+  }
+
+  /* Margin for each destination text paragraph and CTA */
+  .destination-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  /* CTA button aligned below text */
+  .destination-cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background-color: #006262;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .destination-cta:hover {
+    background-color: #004848;
+    transform: scale(1.05);
+  }
+
+  .destination+.destination {
+    margin-top: 50px;
+  }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+  nav ul li a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .logo-image img {
+    width: 120px;
+  }
+
+  /* Adjust for even larger screens */
+  main {
+    margin-top: 143.5px;
+  }
+
+  /* Destinations Section */
+  .destination-text {
+    max-width: 500px;
+    /* Constrain text block width */
+    padding: 30px;
+    margin: 0 auto;
+    background-color: rgba(0, 98, 98, 0.85);
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: left;
+  }
+
+  /* Paragraph styling within text block */
+  .destination-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  /* CTA button */
+  .destination-cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #006262;
+    color: #004848;
+    /* Darker, complementary text color */
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .itinerary {
+    height: 140px;
+    width: 1040px;
+  }
+
+
+  .destination-cta:hover {
+    background-color: #004848;
+    transform: scale(1.05);
+  }
+}

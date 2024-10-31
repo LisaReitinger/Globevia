@@ -344,6 +344,57 @@ footer {
   margin-top: 20px;
 }
 
+/* About page */
+
+.about-us-main-content {
+  padding: 20px;
+}
+
+.about-us-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  /* Adds space above and below the header */
+}
+
+.about-us-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+
+.about-us-description {
+  padding: 0 10px;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1rem;
+
+}
+
+.about-us-description p {
+  margin-bottom: 15px;
+}
+
+.about-us-video {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.about-us-video iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 8px;
+}
+
 /* Media query: Tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -487,6 +538,10 @@ footer {
 
   .destination+.destination {
     margin-top: 50px;
+  }
+
+  .about-us-description p {
+    margin-bottom: 40px;
   }
 }
 

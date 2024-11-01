@@ -144,7 +144,6 @@ nav ul li a:hover {
   color: #000000;
   padding: 10px 15px;
   border-radius: 5px;
-  border: 2px solid white;
 }
 
 /* Main */
@@ -501,13 +500,11 @@ footer {
     width: fit-content;
   }
 
-
   nav ul li a:hover {
     background-color: white;
     color: #000000;
     padding: 10px 15px;
     border-radius: 5px;
-    border: 2px solid white;
   }
 
   #nav-toggle,
@@ -593,11 +590,11 @@ footer {
     line-height: 1.6;
   }
 
-    /* Margin for each destination text paragraph and CTA */
-    .destination-text h6 {
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
+  /* Margin for each destination text paragraph and CTA */
+  .destination-text h6 {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
 
   /* CTA button aligned below text */
   .destination-cta {

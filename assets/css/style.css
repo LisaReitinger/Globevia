@@ -137,7 +137,6 @@ nav ul li a {
   font-size: 16px;
   padding: 10px;
   display: block;
-
 }
 
 nav ul li a:hover {
@@ -151,7 +150,6 @@ nav ul li a:hover {
 /* Main */
 main {
   background-color: #1d4444;
-  /* Main content takes up remaining space */
   flex: 1;
   margin-top: 103.05px;
 }
@@ -282,12 +280,10 @@ footer {
 /* Hover effect */
 #social-networks a:hover i {
   color: #e0f2f2;
-  /* Slightly lighter hover color */
 }
 
 /* Destination page */
 
-/* Main Content Container */
 .destination-main-content {
   padding: 10px;
 }
@@ -326,7 +322,6 @@ footer {
   margin-bottom: 5px;
 }
 
-/* Paragraph Text */
 .itinerary p {
   font-size: 1em;
   color: #555555;
@@ -339,7 +334,6 @@ footer {
   padding: 0 10px;
 }
 
-/* Destination Section Spacing */
 .destination-section+.destination-section {
   margin-top: 20px;
 }
@@ -355,7 +349,6 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 40px 0;
-  /* Adds space above and below the header */
 }
 
 .about-us-header h1 {
@@ -364,7 +357,6 @@ footer {
   margin-bottom: 40px;
   color: #333;
 }
-
 
 .about-us-description {
   padding: 0 10px;
@@ -375,7 +367,6 @@ footer {
   max-width: 800px;
   margin: 20px auto;
   font-size: 1rem;
-
 }
 
 .about-us-description p {
@@ -402,7 +393,7 @@ footer {
   align-items: center;
   justify-content: center;
   font-family: 'Lato', sans-serif;
-  color: #ffffff; 
+  color: #ffffff;
   min-height: 100vh;
   background-color: #006262;
 }
@@ -424,7 +415,7 @@ footer {
   color: #006262;
 }
 
-.card > h2 {
+.card>h2 {
   color: #006262;
 }
 
@@ -508,17 +499,16 @@ footer {
 
   nav ul li a {
     width: fit-content;
-
   }
 
 
-nav ul li a:hover {
-  background-color: white;
-  color: #000000;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 2px solid white;
-}
+  nav ul li a:hover {
+    background-color: white;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid white;
+  }
 
   #nav-toggle,
   .nav-toggle-label {

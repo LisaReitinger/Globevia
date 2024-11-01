@@ -119,7 +119,7 @@ The website was tested on various devices to ensure a responsive layout across s
 
 Testing sites used:
 - [Responsinator](https://www.responsinator.com)
-- [Am I Responsive](http://ami.responsivedesign.is)
+- [Am I Responsive](https://ui.dev/amiresponsive?url=https://lisareitinger.github.io/Globevia/index.html)
 
 ---
 
